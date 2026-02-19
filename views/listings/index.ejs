@@ -9,15 +9,20 @@
 
 <body>
     <h1>This is all listings</h1>
-    <% for(listing of AllListing){ %>
-        <ul>
+
+    <form method="GET" action="/listings/new"><button>Create new Listing</button>
+    </form>
+
+
+    <ul>
+        <% for(listing of AllListing){ %>
             <li>
                 <a href="/listings/<%= listing._id %>">
                     <%= listing.title %>
                 </a>
             </li>
-        </ul>
-        <% } %>
+            <% } %>
+    </ul>
 </body>
 
 </html>
