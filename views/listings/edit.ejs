@@ -9,15 +9,15 @@
 
 <body>
     <h3>Edit your Data</h3>
-    <form method="POST" action="/listings">
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
 
         <input name="listing[title]" value="<%= listing.title %>" type="text"><br><br>
 
-        <textarea type="text" name="listing[description]" value="<%= listing.description %>"></textarea><br><br>
+        <textarea type="text" name="listing[description]"><%= listing.description %></textarea><br><br>
 
         <input type="text" name="listing[image]" value="<%= listing.image %>"><br><br>
 
-        <input name="listing[price]" value="<%= listing.price %>" type="number"><br><br>
+        <input name="listing[price]" value="<%= listing.price %>" type="number"> <br><br>
 
         <input type="text" name="listing[location]" value="<%= listing.location %>"><br><br>
 
